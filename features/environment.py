@@ -20,6 +20,8 @@ def before_all(context):
         test_env.finalize()
         cclogging.init_root_log_handler()
         UnittestRunner.print_mug_and_paths(test_env)
+    else:
+        raise Exception("Cannot execute without data for 'cafe_proj' and 'cafe_config'.")
 
 
 def before_feature(context, feature):
